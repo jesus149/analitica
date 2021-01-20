@@ -1,0 +1,40 @@
+<h1 color="secondary">Comparación</h1>
+<div class="row comparacion">
+    <div class="col-md-12">
+        <div class="row mx-auto">
+            <div class="col-md-12">
+                <p class="text-center">Selecciona el rango de fechas</p>
+            </div>
+            <div class="row mx-auto">
+              <div class="col-md-6 float-right">
+                <mat-form-field appearance="outline" id="field_fechaIni" >
+                  <!-- <mat-label>Input disabled</mat-label> -->
+                  <input matInput [matDatepicker]="dp3" disabled placeholder="fecha inical">
+                  <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+                  <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+                </mat-form-field>
+              </div>
+              
+              <div class="col-md-6 float-right">
+                <mat-form-field appearance="outline" id="field_fechaFinal">
+                  <!-- <mat-label>Input disabled</mat-label> -->
+                  <input matInput [matDatepicker]="dp1" disabled>
+                  <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+                  <mat-datepicker #dp1 disabled="false"></mat-datepicker>
+                </mat-form-field>
+              </div>
+              <div class="col-md-12">
+                <button color="primary" 
+                    mat-raised-button 
+                    type="submit" 
+                    class="btn-basic btn-solicitar"
+                    mat-raised-button>
+                    Comparar
+                </button>
+              </div>
+            </div>
+              
+        </div>
+        
+    </div>
+</div>

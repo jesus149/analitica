@@ -1,0 +1,82 @@
+<div *ngIf="listaElementosOrigen">
+    <form (ngSubmit)="addTable()" [formGroup]="formAddListMapper">
+        <div class="row">
+           <div class="col-md-6 mx-auto comparacion">
+             <div class="row">
+               <div class="col-md-6 ">
+                 <h2 class="text-center"><b>ORIGEN   </b></h2>
+
+                    <mat-form-field appearance="outline">
+                     <mat-select name="origen" formControlName="origen">
+                       <mat-option *ngFor="let item of listaElementosOrigen" [value]="item" >
+                         {{item.elemento}}
+                       </mat-option>
+                     </mat-select>
+                   </mat-form-field>
+               </div>
+               <div class="col-md-6">
+                 <h2 class="text-center"><b>DESTINO</b></h2>
+                 <mat-form-field appearance="outline">
+                  <mat-select name="destino" formControlName="destino">
+                       <mat-option *ngFor="let dato of catDestino" [value]="dato">
+                         {{dato.descrip}}
+                       </mat-option>
+                   </mat-select>
+                 </mat-form-field>
+               </div>
+     
+                <div class="col-md-12">
+             
+                 <button color="primary" 
+                         mat-raised-button 
+                         type="submit" 
+                         class="btn-basic btn-solicitar float-right"
+                         mat-raised-button>
+                         Cargar
+                 </button>
+               </div>
+             </div>
+           </div>
+          
+         </div>
+      </form>  
+      <br>
+      <div class="row">
+           <div class="col-md-6 mx-auto comparacion">
+              <table  mat-table [dataSource]="dataSource" matSort>
+                <!-- Progress Column -->
+                  <ng-container matColumnDef="origen">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Elemento</b></th>
+                    <td mat-cell *matCellDef="let row">{{ row.origen.elemento }}</td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="valor">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Valor</b></th>
+                    <td mat-cell *matCellDef="let row"></td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="destino">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Destino</b></th>
+                    <td mat-cell *matCellDef="let row">{{ row.destino.descrip }}</td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+              </table> 
+           </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+           <button color="primary" 
+                         mat-raised-button 
+                         type="submit" 
+                         class="btn-basic btn-solicitar float-right"
+                         mat-raised-button>
+                         Mapear
+                 </button>
+        </div>
+      </div>
+      
+</div>

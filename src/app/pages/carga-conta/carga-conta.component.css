@@ -1,0 +1,33 @@
+.hidden {
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+}
+
+.mat-button-toggle-standalone.mat-button-toggle-appearance-standard, .mat-button-toggle-group-appearance-standard {
+  border-radius: 40px;
+  border: 1px solid #80C9C4;
+  opacity: 1;
+}
+
+.mat-button-toggle-checked {
+  background-color: #80C9C4;
+  color: #fff !important;
+}
+
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+  line-height: 40px !important;
+  padding: 1px 20px !important;
+}
+
+.btn-solicitar{
+  background: #A6E6E2 0% 0% no-repeat padding-box;
+  border-radius: 19px;
+  opacity: 1;
+  min-width: 115px;
+}
+
+.comparacion{
+  background-color: white;
+  padding: 20px;
+}

@@ -1,0 +1,85 @@
+<div *ngIf="true" class="modal-dialog">
+
+  <div class="modal-header">
+    <h4 style="color: #fff;"><b>Selecciona el plazo de tu plan</b> </h4>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="clear()" style="color: white;">
+      <i class="far fa-times-circle"></i>
+    </button>
+  </div>
+  <form name="parentForm" role="form"  novalidate>
+    <div class="modal-body">
+        <h3>{{membershipData.membership_description}}</h3>
+       <ul class="list-meses">
+          <li class="row">
+            <div class="col-3">
+              <mat-radio-button   [value]="membershipData.membership_price_1_month">
+                <p>1 Mes</p> 
+              </mat-radio-button>
+            </div>
+            <div class="col-9">
+             <p class="text-right"> $ {{membershipData.membership_price_1_month}}.00 MXN</p>
+            </div>
+            
+          </li>
+
+          <li class="row" >
+            <div class="col-3">
+                <mat-radio-button   [value]="membershipData.membership_price_12_month">
+                  <p>12 Meses</p>
+                </mat-radio-button>
+            </div>
+            <div class="col-9">
+              <p class="text-right">
+                $ {{membershipData.membership_price_12_month}}.00 MXN
+              </p>
+            </div>
+           
+          </li>
+
+          <li class="row">
+            <div class="col-3">
+              <mat-radio-button   [value]="membershipData.membership_price_24_month">
+                24 Meses
+              </mat-radio-button>
+            </div>
+            <div class="col-9">
+              <p class="text-right">
+                $ {{membershipData.membership_price_24_month}}.00 MXN
+              </p>
+            </div>
+            
+          </li>
+          <li class="row">
+            <div class="col-3">
+              <mat-radio-button   [value]="membershipData.membership_price_36_month">
+              36 Meses
+              </mat-radio-button>
+            </div>
+            <div class="col-9">
+              <p class="text-right">
+                $ {{membershipData.membership_price_36_month}}.00 MXN
+              </p>
+            </div>
+            
+          </li>
+
+        </ul>
+      <mat-radio-group>
+       
+
+       
+      </mat-radio-group>
+      
+
+      <div class="row">
+        <div class="mx-auto col-4">
+          <button color="primary"  mat-raised-button type="submit" class="btn btn-basic btn-sm" (click)="delete(null)">Continuar</button>
+      
+        </div>
+      </div>
+      
+    </div>
+    
+  </form>
+</div>
+

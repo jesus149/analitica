@@ -1,0 +1,27 @@
+<div *ngIf="true" class="modal-content">
+  <form name="parentForm" role="form"  novalidate>
+    <div class="modal-body">
+      <h5 class="text-center"><b>Esta apunto de eliminar un registro de RFC</b></h5>
+      <p class="text-center">Los registros de una cuenta no se pueden volver a dar de alta
+          después de eliminarlos sin contactar al administrador del sistema</p>
+      <p class="text-center"><b>¿Desea continuar?</b></p>
+
+       <p class="text-center"><b>{{user_rfc}}</b></p>
+      <!-- <app-componente></app-componente> -->
+    </div>
+    <div class="modal-footer">
+      <div class="col-6" style="text-align: center;">
+        <button type="submit" id="save-entity" (click)="delete()" class=" btn btn-primary btn-lg btn-aceptar">
+          Continuar
+        </button>
+      </div>
+      <div class="col-6" style="text-align: center;">
+        <button type="button" class=" btn btn-primary btn-lg btn-cancelar" data-dismiss="modal" (click)="clear()">
+          cancelar
+        </button>
+      </div>
+      
+    </div>
+  </form>
+</div>
+

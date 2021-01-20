@@ -1,0 +1,70 @@
+.content-certificados{
+    background-color: #fff;
+    padding: 10%;
+}
+  .pointer {cursor: pointer;}
+
+  .hidden {
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+  }
+
+  .btn-solicitar{
+    background: #A6E6E2 0% 0% no-repeat padding-box;
+    border-radius: 19px;
+    opacity: 1;
+    color: #fff !important;
+}
+
+  .btn-cancelar{
+    background: #F44336 0% 0% no-repeat padding-box;
+    border-radius: 19px;
+    opacity: 1;
+    padding: 5px 40px;
+    border: none;
+  }
+
+  .btn-aceptar{
+    background: #A6E6E2 0% 0% no-repeat padding-box;
+    border-radius: 19px;
+    opacity: 1;
+    padding: 5px 40px;
+    border: none;
+  }
+
+  .modal-header {
+    border-bottom:none !important;
+  }
+  .modal-footer {
+    border-top:none !important;
+  }
+
+  .modal-body > p{
+    color: #fff;
+  }
+
+  .modal-body > h5{
+    color: #fff;
+  }
+
+  .close {
+    float: right;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 1;
+}
+
+tr.mat-row:hover{
+  cursor: pointer;
+  background-color: #a6e6e24f;
+}
+
+.modal-content {
+  background-color: #dea80f !important;
+  border-radius: 20px !important;
+  border: none !important;
+}

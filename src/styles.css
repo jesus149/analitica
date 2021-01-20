@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/css/analytica.css";
+@import "assets/css/spinners.css";
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: sans-serif, "Helvetica Neue", sans-serif;
+}
+
+body {overflow-x: hidden;} 
+
+label, p, h2, h3, h4{
+  color:#6B6E6D; 
+}
+
+h1{
+  color: #80C9C4;
+  font-size: 22pt;
+  font-weight: 400;
+}
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+} 
+
+/* Para comportamiento de fondo blanco dentro de los inputs  */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: white !important;
+}
+
+#wrapper {
+  margin-top: 5%;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 12px;
+  width: 100%;
+}
+
+tr.mat-header-row {
+  background-color: #fafafa;
+}
+
+th.mat-header-cell {
+  font-weight: 500;
+  color: black;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+#themecolors a {
+  cursor: pointer;
+}
+
+.alert {
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 1.25rem;
+  text-align: center;
+}
+
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+  line-height: 40px !important;
+  padding: 1px 30px !important;
+  box-shadow: 0px 0px 6px #000000A1;
+
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}

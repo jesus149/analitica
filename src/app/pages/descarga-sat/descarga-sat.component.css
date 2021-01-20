@@ -1,0 +1,62 @@
+.aceptada{
+    color: #A3C195;
+    background-color: #F0FFE9;
+    padding: 5px;
+    border: solid 1px;
+    border-radius: 5px;
+}
+.btn-procesado{
+    color: #8FB6E1;
+    background-color: #D2EDFB;
+    padding: 5px;
+    border: solid 1px;
+    border-radius: 5px;
+}
+.btn-rechazada{
+    color: #e26a6a;
+    background-color: #d8798173;
+    padding: 5px;
+    border: solid 1px;
+    border-radius: 5px;
+}
+
+.mat-button-toggle-standalone.mat-button-toggle-appearance-standard, .mat-button-toggle-group-appearance-standard {
+    border-radius: 40px;
+    border: 1px solid #80C9C4;
+    opacity: 1;
+}
+
+.mat-button-toggle-checked {
+    background-color: #80C9C4;
+    color: #fff !important;
+}
+
+.mat-button-toggle-appearance-standard .mat-button-toggle-label-content {
+    line-height: 40px !important;
+    padding: 1px 20px !important;
+}
+
+.content-solicitudes{
+    background-color: #fff;
+    padding: 20px;
+}
+
+.btn-solicitar{
+    float: right; 
+    margin-top: 40px;
+    background: #A6E6E2 0% 0% no-repeat padding-box;
+    border-radius: 19px;
+    opacity: 1;
+}
+
+.form-control {
+    border-radius: 20px;
+    min-height: 45px;
+
+}
+
+.modal-dialog {
+    max-width: 50% !important;
+    margin: 50px auto !important;
+}
+

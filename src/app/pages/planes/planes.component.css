@@ -1,0 +1,99 @@
+.text{
+    font-weight: 500;
+    color: #80d0db;
+}
+.content-plan{
+    background-color: #fff;
+    padding: 50px 10px;
+    border-radius: 50px;
+    margin: 30px 0px;
+}
+
+.circle{
+    width: 70px;
+    background-color: #F0F2F6;
+    height: 70px;
+    border-radius: 100%;
+    margin: auto;
+}
+
+h3{
+    color: #80d0db;
+    font-weight: 600;
+}
+
+.btn-basic{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 19px;
+    opacity: 1;
+    color: #99abb4;
+    text-align: center;
+    position: relative;
+    border: solid 2px #80C9C4;
+}
+
+.btn-basic:hover{
+    background: #80C9C4 0% 0% no-repeat padding-box;
+    color: #fff;
+    
+}
+
+.listas-plan{
+    list-style: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    font-size: 14px;
+
+
+}
+
+.modal-header{
+    background-color: #80C9C4;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.btn-solicitar{
+    background: #A6E6E2 0% 0% no-repeat padding-box;
+    border-radius: 19px;
+    opacity: 1;
+}
+
+.modal-dialog {
+    max-width: 100% !important;
+    margin: 0px auto !important;
+}
+
+.mat-radio-group > ul{
+    list-style: none;
+    padding: 0;
+}
+
+.mat-radio-group > ul >li{
+    border-bottom: solid 2px #ada9a9;
+    margin-bottom: 20px;
+}
+
+.list-meses{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-meses > li{
+    border-bottom: solid 1px #b3aeae;
+    margin-bottom: 15px;
+}
+
+.modal-body {
+    margin: 0px 25px !important;
+}
+
+.modal-content {
+    border-radius: 20px !important;
+    -webkit-box-shadow: -1px 0px 32px -5px rgb(128 201 196)!important;
+    -moz-box-shadow: -1px 0px 32px -5px rgba(147,207,180,1)!important;
+    box-shadow: -1px 0px 32px -5px rgb(128 201 196)!important;
+}

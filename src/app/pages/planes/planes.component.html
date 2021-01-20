@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="text-center"><b>¿Buscas mayor funcionalidad a mejor precio?</b></h2>
+    </div>
+</div>
+
+<!--PLAN INDIVIDUAL-->
+
+<div class="row" *ngFor="let item of listMembresias;">
+    
+    <div class="col-md-7 mx-auto"  >
+       <div class="row content-plan">
+           <div class="col-md-2">
+                <div class="circle"></div>
+           </div>
+
+           <div class="col-md-7">
+            
+            <h3>Plan {{item.membership_description}}</h3>
+            <ul class="listas-plan">
+                <li><b>+ {{item.membership_razones_sociales}} Razón social</b></li>
+                <li><b>+ {{item.membership_descargas_rfc}} consultas por RFC</b></li>
+                <li *ngIf="item.membership_asistencia_tecnica_chat == 'SI'"><b>+ Asistencia tecnica vía correo </b></li>
+                <li *ngIf="item.membership_asistencia_tecnica_correo == 'SI'"><b>+ Asistencia tecnica vía chat </b></li>
+                <li *ngIf="item.membership_balanza_contable == 'SI'"><b>+ Balanza contable </b></li>
+                <li *ngIf="item.membership_carga_polizas_contables == 'SI'"><b>+ Carga de pólizas contables </b></li>
+                <li *ngIf="item.membership_revision_diferencias_detalle == 'SI'"><b>+ Revisión de diferencias generales a detalle </b></li>
+                <li *ngIf="item.membership_consulta_validacion_listas_negras == 'SI'"><b>+ Consulta de recibidos de listas negras</b></li>
+                <li *ngIf="item.membership_calculo_validacion_pagos_provisionales == 'SI'"><b>+ Cálculo de pagos provisionales</b></li>
+            </ul>
+           </div>
+           <div class="col-md-3" *ngIf="item.membership_description != 'Gratuita'">
+            <p class="text">desde</p>
+            <h3>${{item.membership_price_12_month}} MXN</h3>
+            <button class="btn btn-basic" (click)="elegirPlan(item.membership_type_id)" >Elegir plan</button>
+           </div>
+
+       </div>
+    </div>
+</div>
+
+
+
+
+

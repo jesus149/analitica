@@ -1,0 +1,30 @@
+<div *ngIf="true">
+  <div class="modal-header">
+    <h4 id="app-update-heading">Eliminar </h4>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="clear()">
+      <i class="far fa-times-circle"></i>
+    </button>
+  </div>
+  <form name="parentForm" role="form"  novalidate>
+    <div class="modal-body">
+
+      CONTENIDO DE DETALLE...
+      <!-- <app-componente></app-componente> -->
+    </div>
+    <div class="modal-footer">
+      <div class="col-4">
+        <button type="submit" id="save-entity" class="btn btn-primary btn-lg">
+          Delete
+        </button>
+      </div>
+      <div class="col-4">&nbsp;</div>
+      <div class="col-4">
+        <button type="button" class=" btn btn-primary btn-lg btn-cancelar" data-dismiss="modal" (click)="clear()">
+          cancelar
+        </button>
+      </div>
+      
+    </div>
+  </form>
+</div>
+

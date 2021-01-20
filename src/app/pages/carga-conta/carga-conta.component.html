@@ -1,0 +1,81 @@
+<h1 color="secondary">Carga de Pólizas Contables</h1>
+<div *ngIf="auxBandera" >
+
+  <form [formGroup]="editForm">
+      <div class="row mx-auto">
+        <div class="col-md-3">
+              <label>Mapeo:</label>
+              <br>
+              <mat-button-toggle-group #group="matButtonToggleGroup" value="nuevo">
+              <mat-button-toggle value="nuevo">Nuevo</mat-button-toggle>
+              <mat-button-toggle value="existente" >Existente</mat-button-toggle>
+              </mat-button-toggle-group>
+        </div>
+        <div class="col-md-6">
+              <label>Archivo de pólizas (.xml):</label>
+              <mat-form-field appearance="outline">
+                <input readonly matInput placeholder="Carga archivo XML" id="upload-file-polizas" name="polizas_file" formControlName="polizas_file_name">
+                <mat-icon  matSuffix (click)="handleClick('upload-file')" href="javascript:undefined" class="pointer">cloud_upload</mat-icon>
+              </mat-form-field>
+              <input class="hidden m-1" type="file" id="upload-file" name="upload-file-polizas" 
+                accept=".xml" ngf-max-size="2MB" 
+                (change)="addAttachment($event , 'xml')">
+        </div>
+
+      </div>
+
+  </form>
+
+</div>
+
+<!-- -------------------- -->
+
+
+
+<div *ngIf="!auxBandera" >
+  <app-carga-conta-detail   [user_file_location]="user_file_location" ></app-carga-conta-detail>
+  <button (click)="cancelar()" class="btn-basic btn-solicitar" > cancelar </button>
+</div>
+
+
+
+
+
+<hr/>
+<div class="row content-solicitudes"  *ngIf="auxBandera">
+  <h3>Últimas solicitudes de Carga.</h3>
+    <div *ngIf="user_file_location" >
+    </div>
+    <div class="col-md-12 text-center">
+      <h3 class="mb-3">Sin solicitudes de descarga</h3>
+    </div>
+
+    <table *ngIf="auxBandera" mat-table [dataSource]="dataSource" matSort>
+       <!-- Progress Column -->
+      <ng-container matColumnDef="file_id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header><b>ID de Carga</b></th>
+        <td mat-cell *matCellDef="let row">{{ row.file_id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="file_date">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Fecha de Solicitud</b></th>
+        <td mat-cell *matCellDef="let row">{{ row.file_date }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="user_file_location">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Archivo de Polizas</b></th>
+        <td mat-cell *matCellDef="let row">{{ row.user_file_location }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="file_status">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Estatus</b></th>
+        <td mat-cell *matCellDef="let row" (click)="readPolizas(row.user_file_location)"><span>Completado</span></td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+    </table>
+   <!-- <button (click)="onClick()" > test </button> -->
+  </div>
+

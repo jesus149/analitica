@@ -1,0 +1,139 @@
+*{
+    font-family: sans-serif;
+}
+
+.background-login{
+    background-image: url('../../assets/images/login-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    background-position: center;
+
+}
+
+.div-from-login{
+    padding: 10% 15% 10% 15%;
+    background-image: url(/assets/images/Log-In.PNG);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+
+}
+
+
+.btn-basic{
+    width: 100%;
+    background: #80C9C4 0% 0% no-repeat padding-box;
+    border-radius: 19px;
+    opacity: 1;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    border: solid 2px #80C9C4;
+}
+
+.btn-basic:hover{
+    position: relative;
+    background-color: #fff;
+    border: solid 2px #80C9C4;
+    color: #99abb4;
+}
+
+
+.form-login{
+    width: 80%;
+}
+
+ @media only screen and (max-width: 600px) {
+    .form-login{
+        width: 100% !important;
+    }
+    .col-md-5{
+        padding: 0;
+        margin: 0;
+    }
+  }
+
+
+  .btn-linkedin {
+    width: 60%;
+    height: 35px;
+    background: #1374B0 0% 0% no-repeat padding-box;
+    background-image: url('../../assets/images/btn-link.jpeg');
+    background-size: cover;
+    border-radius: 19px;
+    opacity: 1;
+    color: #fff;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay {
+    border-radius: 19px;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    background-color: #125687;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+  }
+  
+  .btn-linkedin:hover .overlay {
+    width: 99%;
+    cursor: pointer;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-weight: 900;
+  }
+  .text-linkedin{
+    color: white;
+    padding-top: 10px;
+    margin: auto;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .text-crear{
+    font-size: 14px;
+  }
+  .text-crear a{
+    color: #125687;
+  }
+  .separador{
+    margin: auto;
+    margin-top: 15px;
+  }
+
+  .text-secondary{
+    font-size: 14px !important;
+    color: #99abb4;
+  }
+
+  .mat-slide-toggle-content {
+    font-size: 14px !important;
+    color: #99abb4;
+}
+
+.alert{
+  position: absolute !important;
+  width: 100% !important;
+}
